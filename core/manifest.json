@@ -6,7 +6,7 @@
     "background": {
         "service_worker": "background.js"
     },
-    "permissions": ["storage"],
+    "permissions": ["storage", "loginState", "tabs"],
     "action": {
         "default_icon": {
             "16": "/images/icon16.png",
@@ -23,7 +23,7 @@
     },
     "content_scripts": [
         {
-          "matches": ["*://apex.savegnago.com.br/apex/*"],
+          "matches": ["*://apex.savegnago.com.br:*/apex/*"],
           "js": ["content.js"]
         }
     ]
